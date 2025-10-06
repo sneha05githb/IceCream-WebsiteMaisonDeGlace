@@ -2,7 +2,7 @@
 
 A clean, responsive **ice-cream shop** website built with **HTML & CSS**.
 
-![Homepage Screenshot](docs/screenshot-home.png)
+![Homepage Screenshot](screenshot-home.png)
 **Live demo:** https://sneha05githb.github.io/IceCream-WebsiteMaisonDeGlace/  
 **Repo:** https://github.com/sneha05githb/IceCream-WebsiteMaisonDeGlace
 
