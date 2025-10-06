@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Flavours – Maison de Glace</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Maison de Glace</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="flavours.html" class="active">Flavours</a>
+      <a href="order.html">Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="basket-icon">
+      <a href="basket.html"><i class="fas fa-shopping-basket"></i></a>
+    </div>
+  </header>
+  
+  <main>
+    <h2 class="flavour-title">Our Flavours</h2>
+    
+    <!-- Ice Cream Tray with Overlayed Labels -->
+    <div class="flavour-tray-wrapper">
+      <img src="images/ice-cream-tray.jpg" alt="Tray of 12 ice cream scoops" class="flavour-tray">
+      <div class="flavour-label" style="top: 7%; left: 9%;">Rose Petal</div>
+      <div class="flavour-label" style="top: 7%; left: 41%;">Vanilla Bean Crème</div>
+      <div class="flavour-label" style="top: 7%; left: 73%;">Mint Cloud</div>
+      <div class="flavour-label" style="top: 30%; left: 9%;">Raspberry Velvet</div>
+      <div class="flavour-label" style="top: 30%; left: 41%;">Champagne Sorbet</div>
+      <div class="flavour-label" style="top: 30%; left: 73%;">Frozen Sky</div>
+      <div class="flavour-label" style="top: 53%; left: 9%;">Cherry Éclair</div>
+      <div class="flavour-label" style="top: 53%; left: 41%;">Almond Cream</div>
+      <div class="flavour-label" style="top: 53%; left: 73%;">Lemon Patisserie</div>
+      <div class="flavour-label" style="top: 76%; left: 9%;">Strawberry Kiss</div>
+      <div class="flavour-label" style="top: 76%; left: 41%;">White Truffle Dream</div>
+      <div class="flavour-label" style="top: 76%; left: 73%;">Cotton Rose</div>
+    </div>
+    
+    <!-- Flavour Descriptions -->
+    <section class="flavour-descriptions">
+      <h3>Flavour Descriptions</h3>
+      <ul>
+        <li><strong>Rose Petal:</strong> Light, floral and refreshing.</li>
+        <li><strong>Vanilla Bean Crème:</strong> Smooth and classic vanilla.</li>
+        <li><strong>Mint Cloud:</strong> Crisp and cooling mint.</li>
+        <li><strong>Raspberry Velvet:</strong> Rich, berry-sweet indulgence.</li>
+        <li><strong>Champagne Sorbet:</strong> Light and sparkling sorbet.</li>
+        <li><strong>Frozen Sky:</strong> Creamy mint with a cool finish.</li>
+        <li><strong>Cherry Éclair:</strong> Sweet cherry with a hint of jam.</li>
+        <li><strong>Almond Cream:</strong> Subtle, nutty and creamy.</li>
+        <li><strong>Lemon Patisserie:</strong> Tangy lemon with a smooth finish.</li>
+        <li><strong>Strawberry Kiss:</strong> Classic, sweet strawberry flavour.</li>
+        <li><strong>White Truffle Dream:</strong> Silky white chocolate delight.</li>
+        <li><strong>Cotton Rose:</strong> Soft cotton candy with a floral twist.</li>
+      </ul>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Maison de Glace</p>
+  </footer>
+  <!-- Modal Container -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modal-flavour-name"></h3>
+    <p id="modal-flavour-description"></p>
+  </div>
+</div>
+
+  <script>
+    // Object mapping flavour names to their descriptions
+    const flavourDescriptions = {
+      "Rose Petal": "Light, floral and refreshing.",
+      "Vanilla Bean Crème": "Smooth and classic vanilla.",
+      "Mint Cloud": "Crisp and cooling mint.",
+      "Raspberry Velvet": "Rich, berry-sweet indulgence.",
+      "Champagne Sorbet": "Light and sparkling sorbet.",
+      "Frozen Sky": "Creamy mint with a cool finish.",
+      "Cherry Éclair": "Sweet cherry with a hint of jam.",
+      "Almond Cream": "Subtle, nutty and creamy.",
+      "Lemon Patisserie": "Tangy lemon with a smooth finish.",
+      "Strawberry Kiss": "Classic, sweet strawberry flavour.",
+      "White Truffle Dream": "Silky white chocolate delight.",
+      "Cotton Rose": "Soft cotton candy with a floral twist."
+    };
+  
+    // Wait until the DOM is loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      const modal = document.getElementById("modal");
+      const modalFlavourName = document.getElementById("modal-flavour-name");
+      const modalFlavourDescription = document.getElementById("modal-flavour-description");
+      const closeModal = document.querySelector(".close");
+  
+      // Add click event listeners to all flavour labels
+      const flavourLabels = document.querySelectorAll(".flavour-label");
+      flavourLabels.forEach(function(label) {
+        label.addEventListener("click", function() {
+          const flavourName = this.textContent.trim();
+          modalFlavourName.textContent = flavourName;
+          modalFlavourDescription.textContent = flavourDescriptions[flavourName] || "Description not available.";
+          modal.style.display = "block";
+        });
+      });
+  
+      // Close modal when the user clicks on the "x"
+      closeModal.addEventListener("click", function() {
+        modal.style.display = "none";
+      });
+  
+      // Close modal when the user clicks outside of the modal content
+      window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – Maison de Glace</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Maison de Glace</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="flavours.html">Flavours</a>
+      <a href="order.html">Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="basket-icon">
+      <a href="basket.html"><i class="fas fa-shopping-basket"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>If you have questions, special requests, or just want to say bonjour — we’d love to hear from you.</p>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="contact-button">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@maisondeglace.co.uk">contact@maisondeglace.co.uk</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+447523123456">+44 7523 123456</a></p>
+      </div>
+      
+    </section>
+  </main>
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+  
+    <div class="faq">
+      <h4>🕒 When will my order be delivered?</h4>
+      <p>All orders are packed and shipped within 1–2 working days. You’ll receive an email confirmation once it’s on the way.</p>
+    </div>
+  
+    <div class="faq">
+      <h4>📦 Do you ship nationwide?</h4>
+      <p>Yes! We deliver anywhere in the UK using insulated packaging to keep your ice cream frozen.</p>
+    </div>
+  
+    <div class="faq">
+      <h4>🍨 Can I request custom flavours?</h4>
+      <p>At the moment, we offer 12 signature flavours — but keep an eye on our seasonal limited editions!</p>
+    </div>
+  
+    <div class="faq">
+      <h4>💳 What payment methods do you accept?</h4>
+      <p>We accept all major debit/credit cards and Apple Pay. All payments are securely processed.</p>
+    </div>
+  </section>
+  
+  <footer>
+    <p>© 2025 Maison de Glace</p>
+  </footer>
+
+</body>
+</html>
